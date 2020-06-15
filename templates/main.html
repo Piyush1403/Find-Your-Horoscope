@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Free horoscope readings!</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% block header %}
+    <h1>{% block title %}Find your daily horoscope!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+      <label for="sign">Please enter your sign: </label>
+      <input name="sign" id="sign" required>
+      <input type="submit" value="Submit">
+  </form>
+  
+  <article class="post">
+      <h2 class="body">{{ sign }}</h2>
+      <p class="body">{{ all_reading }}</p>
+  </article>
+{% endblock %}
