@@ -10,4 +10,5 @@ A simple web app created using Flask that scrapes text using Beautiful Soup and 
 ## Run Program  
 
 `set FLASK_APP=horoscope.py`
+
 `flask run`
